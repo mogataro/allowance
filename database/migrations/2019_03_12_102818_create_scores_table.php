@@ -7,9 +7,11 @@ use Illuminate\Database\Migrations\Migration;
 class CreateScoresTable extends Migration
 {
     /**
-     * Run the migrations.
+     * スコアテーブルマイグレーションクラス
+     * 科目ごとのスコアを管理する
      *
-     * @return void
+     * @author negishi
+     * @since  2019-03-13
      */
     public function up()
     {
