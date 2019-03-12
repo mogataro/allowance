@@ -61,13 +61,11 @@ class CsvReader
 
         $csvDataArray = [];
                 
-        if (empty($csvFile) == FALSE){
-                
+        if (empty($csvFile) == FALSE){        
             // CSVファイルのデータを配列にセット
             foreach ($csvFile as $csvLineData){
                 $csvDataArray[] = $csvLineData;
-            }
-                
+            }        
         }
 
         return $csvDataArray;
