@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
 		Schema::create('users', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
+			$table->date('birthday')->default('2004-04-01');
 			$table->string('email')->unique();
 			$table->timestamp('email_verified_at')->nullable();   // メール確認の機能を有効にする際に必要
 			$table->string('password');
