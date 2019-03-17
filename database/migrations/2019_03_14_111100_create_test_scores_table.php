@@ -30,19 +30,16 @@ class CreateTestScoresTable extends Migration
             $table->foreign('test_type_id')
                 ->references('id')
                 ->on('test_types')
-                ->onDelete('cascade')
                 ->onUpdate('cascade');
             
             $table->foreign('test_class_id')
                 ->references('id')
                 ->on('test_classes')
-                ->onDelete('cascade')
                 ->onUpdate('cascade');
 
             $table->foreign('test_subject_id')
                 ->references('id')
                 ->on('test_subjects')
-                ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
     }
