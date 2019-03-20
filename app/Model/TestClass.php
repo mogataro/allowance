@@ -1,18 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TestSubject extends Model
+class TestClass extends Model
 {
     /**
-     * TestSubject
+     * TestClass
      *
      * @var array
      */
     protected $fillable = [
-        'test_class_id',
-        'test_subject_name'
+        'test_type_id',
+        'test_class_name'
     ];
 }
