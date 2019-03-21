@@ -36,4 +36,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * リレーション (多対1の関係)
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function userAuthority() // 単数形
+    {
+        return $this->belongsTo('App\Model\UserAuthority', 'status_id');
+    }
 }
