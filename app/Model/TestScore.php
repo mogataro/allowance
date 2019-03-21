@@ -20,4 +20,14 @@ class TestScore extends Model
         'acquisition_score',
         'perfect_score'
     ];
+
+    /**
+     * リレーション (多対1の関係)
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function testType() // 単数形
+    {
+        return $this->belongsTo('App\Model\TestType', 'test_type_id', 'id');
+    }
 }

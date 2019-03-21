@@ -37,7 +37,7 @@ class UserAuthoritiesTableSeeder extends Seeder
         foreach($csvArrayData as $csvArrayLineData){
                         
             DB::table('user_authorities')->insert([
-                'authority_id'   => $csvArrayLineData[0],
+                'authority_code'   => $csvArrayLineData[0],
                 'authority_name' => $csvArrayLineData[1],
                 'created_at'     => date("Y-m-d H:i:s"),
                 'updated_at'     => date("Y-m-d H:i:s")

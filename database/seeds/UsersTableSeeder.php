@@ -40,7 +40,7 @@ class UsersTableSeeder extends Seeder
         'name'           => $csvArrayLineData[0],
         'email'          => $csvArrayLineData[1],
         'password'       => Hash::make($csvArrayLineData[2]),
-        'user_authority' => $csvArrayLineData[3],
+        'authority_code' => $csvArrayLineData[3],
         'user_possession_point' => $csvArrayLineData[4]
       ]);
     }

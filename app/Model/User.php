@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'birthday', 'email', 'password', 'user_authority', 'user_possession_point',
+        'name', 'birthday', 'email', 'password', 'authority_code', 'user_possession_point',
     ];
 
     /**
@@ -44,6 +44,6 @@ class User extends Authenticatable
      */
     public function userAuthority() // 単数形
     {
-        return $this->belongsTo('App\Model\UserAuthority', 'status_id');
+        return $this->belongsTo('App\Model\UserAuthority', 'authority_code', 'authority_code');
     }
 }
