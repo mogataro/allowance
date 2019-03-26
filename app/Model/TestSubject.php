@@ -15,4 +15,14 @@ class TestSubject extends Model
         'test_class_id',
         'test_subject_name'
     ];
+
+    /**
+     * リレーション (1対多の関係)
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function testScores() // 複数形
+    {
+        return $this->hasMany('App\Model\TestScore', 'test_subject_id', 'id');
+    }
 }
